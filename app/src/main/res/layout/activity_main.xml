@@ -9,15 +9,22 @@
     android:background="#ffffff"
     tools:context=".MainActivity">
 
+
+
+
     <TextView
         android:id="@+id/flashcard_question"
+        android:background="@drawable/card_background"
+        android:elevation="10dp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/q1"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/colorBlack"
         android:textSize="40sp"
         android:gravity="center" />
 
@@ -26,13 +33,26 @@
         android:visibility="invisible"
         android:layout_below="@id/flashcard_question"
         android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:text="@string/a1"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/colorBlack"
         android:textSize="40sp"
         android:gravity="center" />
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/toggle_choices_visibility"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:src="@drawable/ic_presidential_eagle"
+        />
 
 </RelativeLayout>
