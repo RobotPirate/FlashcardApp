@@ -11,21 +11,20 @@
 
 
 
-
-    <TextView
+   <TextView
         android:id="@+id/flashcard_question"
         android:background="@drawable/card_background"
         android:elevation="10dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
         android:text="@string/q1"
         android:textColor="@color/colorBlack"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:gravity="center" />
 
     <TextView
@@ -44,15 +43,50 @@
         android:textSize="40sp"
         android:gravity="center" />
 
-    <ImageView
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
-        android:id="@+id/toggle_choices_visibility"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:src="@drawable/ic_presidential_eagle"
-        />
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_below="@+id/flashcard_question"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="#ffcc66"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:text="@string/george_bush"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_below="@+id/button1"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="#ffcc66"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:text="@string/richard_nixon"-->
+<!--        />-->
+
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_below="@+id/button2"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="#ffcc66"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:text="@string/barack_obama"-->
+<!--        />-->
+
+
+<!--    <ImageView-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:layout_below="@id/button3"-->
+<!--        android:id="@+id/toggle_choices_visibility"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:gravity="center"-->
+<!--        android:src="@drawable/ic_presidential_eagle"-->
+<!--        />-->
 
 </RelativeLayout>

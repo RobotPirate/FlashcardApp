@@ -32,7 +32,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Lines 37 - 66 are for the single page answer type
+        //
 //        ImageView icon = findViewById(R.id.toggle_choices_visibility);
 //        icon.setImageResource(R.drawable.ic_presidential_eagle);
+
+//        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                findViewById(R.id.button3).setBackgroundColor(getResources().getColor(R.color.colorCorrect));
+//                findViewById(R.id.button2).setBackgroundColor(getResources().getColor(R.color.colorIncorrect));
+//                findViewById(R.id.button2).setBackgroundColor(getResources().getColor(R.color.colorIncorrect));
+//            }
+//        });
+//
+//        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                findViewById(R.id.button2).setBackground(getResources().getDrawable(R.drawable.answer_background));
+//                findViewById(R.id.button3).setBackgroundColor(getResources().getColor(R.color.colorCorrect));
+//                //findViewById(R.id.button2).setBackgroundColor(getResources().getColor(R.color.colorIncorrect));
+//                //findViewById(R.id.button2).setBackgroundColor(getResources().getColor(R.color.colorIncorrect));
+//            }
+//        });
+//
+//        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                findViewById(R.id.button3).setBackgroundColor(getResources().getColor(R.color.colorCorrect));
+//                findViewById(R.id.button2).setBackgroundColor(getResources().getColor(R.color.colorIncorrect));
+//                findViewById(R.id.button1).setBackgroundColor(getResources().getColor(R.color.colorIncorrect));
+//            }
+//        });
+
+
+
     }
 }
