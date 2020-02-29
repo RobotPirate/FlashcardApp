@@ -46,3 +46,4 @@ Thumbs.db
 /build
 /captures
 .externalNativeBuild
+.idea/caches/build_file_checksums.ser
