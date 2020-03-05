@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Best President</string>
+    <string name="app_name">Flash Card!</string>
     <string name="q1">Who is the 44th president of the United States?</string>
     <string name="a1">Barack Obama</string>
     <string name="george_bush">George Bush</string>

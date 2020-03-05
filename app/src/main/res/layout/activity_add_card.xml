@@ -6,6 +6,34 @@
     tools:context=".AddCardActivity"
     >
 
+    <EditText
+    android:id="@+id/addQuestionText"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="20dp"
+    android:hint="Add question here" />
+
+    <EditText
+        android:layout_below="@+id/addQuestionText"
+        android:id="@+id/addAnswerText"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:hint="Add answer here" />
+
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:src="@drawable/ic_download"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+
     <ImageView
     android:id="@+id/closeButton"
     android:src="@drawable/ic_close"
