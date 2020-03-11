@@ -43,6 +43,17 @@
         android:textSize="40sp"
         android:gravity="center" />
 
+    <ImageView
+        android:id="@+id/next"
+        android:src="@drawable/ic_next"
+        android:layout_below="@+id/flashcard_question"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        />
+
 <!--    <Button-->
 <!--        android:id="@+id/button1"-->
 <!--        android:layout_below="@+id/flashcard_question"-->
@@ -93,12 +104,12 @@
     <ImageView
         android:id="@+id/addCardButton"
         android:src="@drawable/ic_plus"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
         />
 
 </RelativeLayout>

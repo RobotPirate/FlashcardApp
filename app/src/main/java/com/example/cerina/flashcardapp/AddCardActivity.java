@@ -16,10 +16,6 @@ public class AddCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
 
-        //Grab the 2 strings from input
-        final String questionInput = ((EditText) findViewById(R.id.addQuestionText)).getText().toString();
-        final String answerInput = ((EditText) findViewById(R.id.addAnswerText)).getText().toString();
-
 
         ImageView closeButton = findViewById(R.id.closeButton);
         closeButton.setOnClickListener(new View.OnClickListener(){
@@ -33,13 +29,9 @@ public class AddCardActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                if(){
-//
-//                }
-//                else{
-//
-//                }
+                //Grab the 2 strings from input
+                final String questionInput = ((EditText) findViewById(R.id.addQuestionText)).getText().toString();
+                final String answerInput = ((EditText) findViewById(R.id.addAnswerText)).getText().toString();
 
                 //Put strings into Intent to pass to MainActivity
                 Intent data = new Intent(); // create a new Intent, this is where we will put our data
