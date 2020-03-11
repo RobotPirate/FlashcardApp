@@ -10,10 +10,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Get instance of our database
+    FlashcardDatabase flashcardDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Flashcard DB
+        flashcardDB = new FlashcardDatabase(getApplicationContext());
 
         //Change view to answer card when question card gets clicked on
         findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
@@ -91,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorWhite));
             findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
             findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
+
+            //save to the DB
+            flashcardDB.inserCard(new Flashcard(newQuestion, newAnswer));
         }
     }
 }
