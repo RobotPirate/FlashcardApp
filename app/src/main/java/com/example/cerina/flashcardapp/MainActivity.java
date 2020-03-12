@@ -78,8 +78,14 @@ public class MainActivity extends AppCompatActivity {
                 //Need to add check where it only displays from the database if it's not empty
 
                 //set question and answer TextViews with q and a from the database
-                ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
-                ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+                TextView q =  findViewById(R.id.flashcard_question);
+                q.setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+                q.setVisibility(View.VISIBLE);
+                findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorWhite));
+
+                TextView a = findViewById(R.id.flashcard_answer);
+                a.setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+                a.setVisibility(View.INVISIBLE);
 
             }
         });
