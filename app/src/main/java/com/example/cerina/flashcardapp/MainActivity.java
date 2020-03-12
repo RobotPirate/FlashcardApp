@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 if(currentCardDisplayedIndex > allFlashcards.size() - 1){
                     currentCardDisplayedIndex = 0;
                 }
-
+                System.out.println("db size: " + allFlashcards.size());
+                System.out.println("curr index: " +  currentCardDisplayedIndex);
                 //Need to add check where it only displays from the database if it's not empty
 
                 //set question and answer TextViews with q and a from the database
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
 
             //save to the DB
-            //flashcardDB.insertCard(new Flashcard(newQuestion, newAnswer));
+            flashcardDB.insertCard(new Flashcard(newQuestion, newAnswer));
         }
     }
 }
