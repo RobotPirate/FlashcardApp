@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
             //save to the DB
             flashcardDB.insertCard(new Flashcard(newQuestion, newAnswer));
+            allFlashcards = flashcardDB.getAllCards();
         }
     }
 }
