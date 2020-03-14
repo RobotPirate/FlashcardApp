@@ -44,6 +44,16 @@
         android:gravity="center" />
 
     <ImageView
+        android:id="@+id/delete"
+        android:src="@drawable/ic_delete"
+        android:layout_below="@+id/flashcard_question"
+        android:layout_centerHorizontal="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
         android:id="@+id/next"
         android:src="@drawable/ic_next"
         android:layout_below="@+id/flashcard_question"

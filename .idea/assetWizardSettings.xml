@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_next" />
-                            <entry key="sourceFile" value="C:\Users\dacer\OneDrive\Documents\GitHub\FlashcardApp\next.svg" />
+                            <entry key="outputName" value="ic_delete" />
+                            <entry key="sourceFile" value="C:\Users\dacer\OneDrive\Documents\GitHub\FlashcardApp\delete.svg" />
                           </map>
                         </option>
                       </PersistentState>

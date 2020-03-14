@@ -5,4 +5,5 @@
     <string name="george_bush">George Bush</string>
     <string name="richard_nixon">Richard Nixon</string>
     <string name="barack_obama">Barack Obama</string>
+    <string name="AddCardPrompt">Add a flashcard</string>
 </resources>

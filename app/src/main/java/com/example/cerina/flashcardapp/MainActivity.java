@@ -90,6 +90,50 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Delete button
+        ImageView delete = (ImageView)findViewById(R.id.delete);
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String currQuestion = allFlashcards.get(currentCardDisplayedIndex).getQuestion();
+                flashcardDB.deleteCard(currQuestion);
+
+                //update local database instance
+                allFlashcards = flashcardDB.getAllCards();
+
+                //Only show card if database is not empty
+                if(allFlashcards.size() <= 0){
+                    //show default prompt
+                    TextView q =  findViewById(R.id.flashcard_question);
+                    q.setText(R.string.AddCardPrompt);
+                    q.setVisibility(View.VISIBLE);
+                    findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorWhite));
+
+                    currentCardDisplayedIndex = 0;
+                }
+                else{
+                    currentCardDisplayedIndex--;
+                    if(currentCardDisplayedIndex < 0){
+                        //wind back to then end of the queue
+                        currentCardDisplayedIndex = allFlashcards.size() - 1;
+                    }
+                    //show the card
+                    TextView q =  findViewById(R.id.flashcard_question);
+                    q.setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+                    q.setVisibility(View.VISIBLE);
+                    findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorWhite));
+
+                    TextView a = findViewById(R.id.flashcard_answer);
+                    a.setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+                    a.setVisibility(View.INVISIBLE);
+                }
+
+//                System.out.println("db size: " + allFlashcards.size());
+//                System.out.println("curr index: " +  currentCardDisplayedIndex);
+            }
+        });
+
 
         //Following are for the single page answer type (Lab 1 optional)
         //
@@ -150,8 +194,9 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
 
             //save to the DB
-            flashcardDB.insertCard(new Flashcard(newQuestion, newAnswer));
-            allFlashcards = flashcardDB.getAllCards();
+            Flashcard newCard = new Flashcard(newQuestion, newAnswer);
+            flashcardDB.insertCard(newCard);
+            allFlashcards.add(newCard);
         }
     }
 }
