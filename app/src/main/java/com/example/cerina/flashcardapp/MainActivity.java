@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorLightBlueBG));
-//                findViewById(R.id.flashcard_question).setVisibility(View.INVISIBLE);
-//                findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
 
                 //animation to reveal answer
                 View questionSideView = findViewById(R.id.flashcard_question);
@@ -79,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
                 anim.setDuration(400);
                 anim.start();
-
-
             }
         });
 
@@ -109,16 +105,41 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("curr index: " +  currentCardDisplayedIndex);
                 //Need to add check where it only displays from the database if it's not empty
 
-                //set question and answer TextViews with q and a from the database
-                TextView q =  findViewById(R.id.flashcard_question);
-                q.setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
-                q.setVisibility(View.VISIBLE);
-                findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorWhite));
 
-                TextView a = findViewById(R.id.flashcard_answer);
-                a.setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
-                a.setVisibility(View.INVISIBLE);
+                if(allFlashcards.size() > 1){
+                    //Animations we will play
+                    final Animation leftOutAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.left_out);
+                    final Animation rightInAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.right_in);
 
+                    findViewById(R.id.flashcard_question).startAnimation(leftOutAnim);
+
+                    leftOutAnim.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            //set question and answer TextViews with q and a from the database
+                            TextView q =  findViewById(R.id.flashcard_question);
+                            q.setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+                            q.setVisibility(View.VISIBLE);
+                            findViewById(R.id.rootView).setBackgroundColor(getResources().getColor(R.color.colorWhite));
+
+                            TextView a = findViewById(R.id.flashcard_answer);
+                            a.setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+                            a.setVisibility(View.INVISIBLE);
+
+                            findViewById(R.id.flashcard_question).startAnimation(rightInAnim);
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+                }
             }
         });
 
